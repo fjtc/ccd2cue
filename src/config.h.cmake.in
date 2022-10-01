@@ -1,0 +1,30 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#define PACKAGE_NAME "GNU ccd2cue"
+#define PACKAGE_VERSION "ccd2cue_VERSION@"
+#define PACKAGE_STRING "GNU ccd2cue @ccd2cue_VERSION@"
+#define PACKAGE_BUGREPORT "bug-ccd2cue@gnu.org"
+#define PACKAGE_URL "https://www.gnu.org/software/ccd2cue"
+#define PACKAGE_MAILING_LIST "ccd2cue@gnu.org"
+#define PACKAGE_TRANSLATION_BUGREPORT "http://translationproject.org/team/"
+#define PACKAGE_COPYRIGHT_HOLDER "Bruno Félix Rezende Ribeiro"
+#define PACKAGE "ccd2cue"
+#define VERSION "@ccd2cue_VERSION@"
+
+#define LOCALEDIR NULL
+
+/* Configurations */
+/*
+Check the actual values for: They are related to MacOS builds.
+HAVE_CFPREFERENCESCOPYAPPVALUE
+HAVE_CFLOCALECOPYPREFERREDLANGUAGES
+*/
+
+#cmakedefine HAVE_ICONV @Intl_FOUND@
+// #cmakedefine ENABLE_NLS 1
+#cmakedefine HAVE_GETTEXT @Intl_FOUND@
+#cmakedefine HAVE_DCGETTEXT @Intl_FOUND@
+
+#endif
+
